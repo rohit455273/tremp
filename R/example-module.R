@@ -1,27 +1,20 @@
-exampleModuleUI <- function(id, label = "Counter") {
-  # All uses of Shiny input/output IDs in the UI must be namespaced,
-  # as in ns("x").
-  ns <- NS(id)
-  tagList(
-    actionButton(ns("button"), label = label),
-    verbatimTextOutput(ns("out"))
-  )
-}
 
-exampleModuleServer <- function(id) {
-  # moduleServer() wraps a function to create the server component of a
-  # module.
-  moduleServer(
-    id,
-    function(input, output, session) {
-      count <- reactiveVal(0)
-      observeEvent(input$button, {
-        count(count() + 1)
-      })
-      output$out <- renderText({
-        count()
-      })
-      count
-    }
-  )
+uif <- function(id){
+  
+  tagList(
+  numericInput(NS(id,"x"), "x", 0),
+  numericInput(NS(id,"y"), "y", 1),
+  numericInput(NS(id,"z", "z"), 2),
+  textOutput(NS(id,"out"))
+)}
+   
+   
+  serverf<- function(id){
+     
+    moduleServer( id, function(input, output, session) {
+  xy <- reactive(input$x - input$y)
+  yz <- reactive(input$z + input$y)
+  xyz <- reactive(xy() * yz())
+  output$out <- renderText(paste0("Result: ", xyz()))
+})
 }
