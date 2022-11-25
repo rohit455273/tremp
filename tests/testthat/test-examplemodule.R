@@ -1,7 +1,7 @@
 context("exampleModuleServer")
 
 # See ?testServer for more information
-testServer(eserverf, {
+testServer(serverf, {
   # Set initial value of a button
   session$setInputs(x=1,y=1,z=1)
 
