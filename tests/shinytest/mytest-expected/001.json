@@ -1,13 +1,11 @@
 {
   "input": {
-    "examplemodule1-button": 0,
-    "examplemodule2-button": 0,
-    "size": 12
+    "x": -2,
+    "y": 3,
+    "z": 2
   },
   "output": {
-    "examplemodule1-out": "0",
-    "examplemodule2-out": "0",
-    "sequence": "1 10 11 12 2 3 4 5 6 7 8 9"
+    "out": "Result: -25"
   },
   "export": {
 
