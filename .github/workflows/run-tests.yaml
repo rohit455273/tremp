@@ -3,6 +3,7 @@ on:
   pull_request:
 
 name: run-tests
+
 jobs:
   run-tests:
     runs-on: ${{ matrix.config.os }}
