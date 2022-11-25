@@ -3,6 +3,5 @@ app$snapshotInit("mytest")
 
 app$snapshot()
 
-app$setInputs(`examplemodule1-button` = "click")
-app$setInputs(`examplemodule1-button` = "click")
+app$setInputs(x=1,y=1,z=1)
 app$snapshot()
