@@ -1,11 +1,11 @@
 {
   "input": {
-    "x": 5,
-    "y": 3,
-    "z": 5
+    "x": 0,
+    "y": 1,
+    "z": 2
   },
   "output": {
-    "out": "Result: 16"
+    "out": "Result: -3"
   },
   "export": {
 
